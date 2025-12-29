@@ -24,6 +24,7 @@ const timesheetRoutes = require('./routes/timesheets');
 const { authenticate } = require('./middleware/auth');
 
 const app = express();
+app.set('trust proxy', 1); // ✅ FIX: Trust Render's proxy
 const PORT = process.env.PORT || 5001; // Changed to 5001 (5000 is used by macOS AirPlay)
 
 // Security middleware
